@@ -25,9 +25,10 @@
           alt="">
       </div>
     {% endif %}
-
+    
     {% if teaser %}
-      <div class="archive__item-teaser">
+      <div class="archive__item-teaser" style="width: 20%">
+
         <img src=
           {% if teaser contains "://" %}
             "{{ teaser }}"
