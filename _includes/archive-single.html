@@ -21,13 +21,12 @@
 
 
 {% if color == 1 %}
-  {% assign color_16 = "#007bff" %}
+  {% assign color_16 = "rgba(0,0,200,0.1)" %}
 {% elsif color == 0 %}
-  {% assign color_16 = "#ffffff" %}
+  {% assign color_16 = "rgba(255,255,255,0.1)" %}
 {% else}
   {% assign color_16 = "#007bff" %}
 {% endif %}
-
 
 <div class="{{ include.type | default: "list" }}__item" style="height: fit-content; background-color: {{ color_16 | default: "#dc3545" }} ">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
