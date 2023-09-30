@@ -14,9 +14,14 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
 ## Publications
 {% assign i = 0 %}
 {% for post in site.publications reversed %}
-  {% assign color = i%2 ? "blue" : "white" %}
+  {% assign color = {{i | modulo: 2}} %}
+  {% if color ==1 %}
+  {% assign color = "blue"}
+  {% else %}
+  {% assign color = "white"}
+  {% endif}
   {% include archive-single.html %}
-  {% assign i= i+1 %}
+  {% assign i= {{i | plus: 1}} %}
 {% endfor %}
 
 
