@@ -19,7 +19,7 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
   {% assign color = "blue"}
   {% else %}
   {% assign color = "white"}
-  {% endif}
+  {% endif %}
   {% include archive-single.html %}
   {% assign i= {{i | plus: 1}} %}
 {% endfor %}
