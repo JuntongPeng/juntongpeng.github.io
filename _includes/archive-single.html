@@ -28,7 +28,7 @@
   <p>test</p>
 </div> -->
 
-<div class="{{ include.type | default: "list" }}__item" style="height: fit-content; background-color: {{ color_16 | default: "#dc3545" }} ">
+<div class="{{ include.type | default: "list" }}__item" style="background-color: {{ color_16 | default: "#dc3545" }} ">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
@@ -41,7 +41,7 @@
           alt="">
       </div>
     {% endif %}
-    <div style="display: grid; grid-template-columns: 30% 70%; place-items: center;">
+    <div style="display: grid; grid-template-columns: 30% 70%; place-items: center; grid-template-rows: 20px">
     {% if teaser %}
       <div class="archive__item-teaser" >
         <img src=
@@ -68,7 +68,6 @@
     {% if post.authors %}
       <p>{{post.authors}}</p>
     {% endif %}
-    
     {% if post.collection == 'teaching' %}
       <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% elsif post.collection == 'publications' %}
