@@ -23,6 +23,10 @@
 {% else}
   {% assign color = '#007bff' %}
 {% endif %}
+<div>
+  <strong> {{ post.collection }} </strong>
+  <strong> {{ color }} </strong>
+</div>
 
 <div class="{{ include.type | default: "list" }}__item" style="height: fit-content; background-color: {{ color }} ">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
@@ -64,7 +68,7 @@
     {% if post.authors %}
       <p>{{post.authors}}</p>
     {% endif %}
-    <p>{{ color }}</p>
+    
     {% if post.collection == 'teaching' %}
       <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% elsif post.collection == 'publications' %}
