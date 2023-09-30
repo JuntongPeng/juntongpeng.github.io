@@ -80,9 +80,7 @@
     {% elsif post.citation %}
       <p>Recommended citation: {{ post.citation }} </p>
     {% elsif post.paperurl %}
-      <p><i class="fa fa-fw fa-file-pdf-o" aria-hidden="true"></i><a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
-
-      
+      <p><i class="ai ai-arxiv ai-fw"></i> <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
     {% endif %}
     </div>
     </div>
