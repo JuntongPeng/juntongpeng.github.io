@@ -12,6 +12,10 @@
   {% assign title = post.title %}
 {% endif %}
 
+{% assign color = {{color | modulo: 2}} %}
+
+
+
 {% if color == 1 %}
   {% assign color_16 = "#007bff" %}
 {% elsif color == 0 %}
