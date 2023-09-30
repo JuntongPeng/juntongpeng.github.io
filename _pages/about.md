@@ -16,7 +16,7 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
 {% for post in site.publications reversed %}
   {% assign color = i%2 ? 'blue' : 'white' %}
   {% include archive-single.html %}
-  {% i=i+1 %}
+  {% assign i=i+1 %}
 {% endfor %}
 
 
