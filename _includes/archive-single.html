@@ -13,22 +13,22 @@
 {% endif %}
 
 {% if color == 'blue' %}
-  {% assign color = "#007bff" %}
+  {% assign color_16 = "#007bff" %}
 {% elsif color == 'white' %}
-  {% assign color = "#ffffff" %}
+  {% assign color_16 = "#ffffff" %}
 {% elsif color == 'red' %}
-  {% assign color = "#dc3545" %}
+  {% assign color_16 = "#dc3545" %}
 {% elsif color == 'yellow' %}
-  {% assign color = "#ffc107" %}
+  {% assign color_16 = "#ffc107" %}
 {% else}
-  {% assign color = "#007bff" %}
+  {% assign color_16 = "#007bff" %}
 {% endif %}
 <div>
   <strong> {{ post.collection }} </strong>
-  <strong> {{ color }} </strong>
+  <strong> {{ color_16 }} </strong>
 </div>
 
-<div class="{{ include.type | default: "list" }}__item" style="height: fit-content; background-color: {{ color | default: "#dc3545" }} ">
+<div class="{{ include.type | default: "list" }}__item" style="height: fit-content; background-color: {{ color_16 | default: "#dc3545" }} ">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
       <div class="archive__item-teaser">
