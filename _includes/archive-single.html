@@ -24,12 +24,16 @@
   {% assign color_16 = "#007bff" %}
 {% endif %}
 
-
+<style>
+  .teaser_pub {
+    margin: 5px 5px;
+  }
+</style>
 
 <div class="{{ include.type | default: "list" }}__item" style="background-color: {{ color_16 | default: "#dc3545" }} ">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
-      <div style="margin: 5px 5px">
+      <div class="teaser_pub">
         <img src=
           {% if teaser contains "://" %}
             "{{ teaser }}"
