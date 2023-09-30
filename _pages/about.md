@@ -22,7 +22,8 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
 
 
 
-## Research Experience
+## Project Experience
+
 
 ## Teaching Assistance
 
