@@ -4,10 +4,9 @@ collection: publications
 accepted: True
 permalink: /publication/CoFormer
 date: 2023-09-15
-authors: Y.Wei, <b>J.Peng</b>,
-venue: '23rd IEEE International Conference on Data Mining'
+authors: Yuxi Wei, <b>Juntong Peng</b>, Tong He, Chenxin Xu, Jian Zhang, Shirui Pan, and Siheng Chen
+venue: 'IEEE International Conference on Data Mining'
 header:
     teaser: "coformer.png"
 ---
 
-In this paper, we proposed a novel model to predict
