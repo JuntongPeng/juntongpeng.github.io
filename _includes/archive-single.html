@@ -12,6 +12,10 @@
   {% assign title = post.title %}
 {% endif %}
 
+<div>
+  <strong> {{ color }} </strong>
+</div>
+
 {% assign color = {{ color | modulo: 2 }} %}
 
 
@@ -23,9 +27,7 @@
 {% else}
   {% assign color_16 = "#007bff" %}
 {% endif %}
-<div>
-  <strong> {{ color }} </strong>
-</div>
+
 
 <div class="{{ include.type | default: "list" }}__item" style="height: fit-content; background-color: {{ color_16 | default: "#dc3545" }} ">
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
