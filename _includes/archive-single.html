@@ -82,7 +82,7 @@
       {% if post.accepted %}
         <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
         {% else %}
-        <p>Submitted to <i>{{ post.venue }}</i>,{{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+        <p>Submitted to <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
       {% endif %} 
     {% endif %}
     {% if post.citation and post.paperurl %}
