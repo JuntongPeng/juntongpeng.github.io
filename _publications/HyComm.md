@@ -3,7 +3,7 @@ title: "Communication-Efficient Multi-Agent 3D Detection via Hybrid Collaboratio
 collection: submissions
 permalink: /publication/HyComm
 date: 2023-09-15
-author:
+authors:
     - Y.Hu
     - J.Peng
     - Y.Yang
