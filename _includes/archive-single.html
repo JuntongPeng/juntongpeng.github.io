@@ -12,16 +12,12 @@
   {% assign title = post.title %}
 {% endif %}
 
-<div>
-  <strong> {{ color }} </strong>
-</div>
 
 {% assign color = color | modulo: 2 %}
 
 
-
 {% if color == 1 %}
-  {% assign color_16 = "rgba(0,0,200,0.1)" %}
+  {% assign color_16 = "rgba(0,0,255,0.2)" %}
 {% elsif color == 0 %}
   {% assign color_16 = "rgba(255,255,255,0.1)" %}
 {% else}
