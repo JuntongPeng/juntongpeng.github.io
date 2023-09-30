@@ -12,8 +12,9 @@ I am a senior undergraduate major in Information Engineering at [Shanghai Jiao T
 I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [Purdue University](https://www.purdue.edu/), working on the topics of **Collaborative Multi-Agent System**, tutored by [Prof. Aniket Bera](https://www.cs.purdue.edu/homes/ab/) and [Dr. Kshitij Tiwari](https://kshitijtiwari.com/).
 
 ## Publications
-
+{% var i =0 %}
 {% for post in site.publications reversed %}
+  {% var color = i%2 ? 'blue' : 'white' %}
   {% include archive-single.html %}
 {% endfor %}
 
