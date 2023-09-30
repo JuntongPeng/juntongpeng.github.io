@@ -1,6 +1,7 @@
 ---
 title: "Graph-based Decentralized Task Allocation for Multi-Robot Target Localization"
-collection: submissions
+collection: publications
+accepted: False
 permalink: /publication/GATAR
 date: 2023-09-15
 authors: <b>J.Peng</b>, H.Viswanath

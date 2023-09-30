@@ -1,6 +1,7 @@
 ---
 title: "Compatible Transformer for Irregularly Sampled Multivariate Time Series"
 collection: publications
+accepted: True
 permalink: /publication/CoFormer
 date: 2023-09-15
 authors: Y.Wei, <b>J.Peng</b>,
