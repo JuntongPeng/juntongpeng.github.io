@@ -12,14 +12,10 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% if color == "blue" %}
+{% if color == 1 %}
   {% assign color_16 = "#007bff" %}
-{% elsif color == "white" %}
+{% elsif color == 0 %}
   {% assign color_16 = "#ffffff" %}
-{% elsif color == "red" %}
-  {% assign color_16 = "#dc3545" %}
-{% elsif color == "yellow" %}
-  {% assign color_16 = "#ffc107" %}
 {% else}
   {% assign color_16 = "#007bff" %}
 {% endif %}
