@@ -56,8 +56,7 @@
     {% if post.authors %}
       <p> {{post.authors}} </p>
     {% endif %}
-
-
+    
     {% if post.collection == 'teaching' %}
       <p> {{ post.type }}, <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }} </p>
     {% elsif post.collection == 'publications' %}
@@ -81,7 +80,9 @@
     {% elsif post.citation %}
       <p>Recommended citation: {{ post.citation }} </p>
     {% elsif post.paperurl %}
-      <p><strong><i class="fa fa-fw fa-file-pdf-o" aria-hidden="true"></i> PDF:</strong> <a href="axXiv"><u>{{ post.paperurl }}</u></a></p>
+      <p><i class="fa fa-fw fa-file-pdf-o" aria-hidden="true"></i><a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
+
+      
     {% endif %}
     </div>
     </div>
