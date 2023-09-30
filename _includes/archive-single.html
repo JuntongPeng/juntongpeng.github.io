@@ -12,19 +12,19 @@
   {% assign title = post.title %}
 {% endif %}
 
-{% if color == 'blue' %}
+{% if color == "blue" %}
   {% assign color_16 = "#007bff" %}
-{% elsif color == 'white' %}
+{% elsif color == "white" %}
   {% assign color_16 = "#ffffff" %}
-{% elsif color == 'red' %}
+{% elsif color == "red" %}
   {% assign color_16 = "#dc3545" %}
-{% elsif color == 'yellow' %}
+{% elsif color == "yellow" %}
   {% assign color_16 = "#ffc107" %}
 {% else}
   {% assign color_16 = "#007bff" %}
 {% endif %}
 <div>
-  <strong> "{{ color }}" </strong>
+  <strong> {{ color }} </strong>
 </div>
 
 <div class="{{ include.type | default: "list" }}__item" style="height: fit-content; background-color: {{ color_16 | default: "#dc3545" }} ">
