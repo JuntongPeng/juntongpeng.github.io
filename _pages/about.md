@@ -20,8 +20,6 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
 {% endfor %}
 
 
-
-
 ## Project Experience
 
 
