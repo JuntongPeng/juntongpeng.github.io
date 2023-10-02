@@ -6,7 +6,7 @@ permalink: /teaching/datascience
 venue: "Shanghai Jiao Tong University, Student Innovation Center"
 date: 2023-09-10
 location: "Shanghai China"
-excerpt: 
+teaser: https://jupyter.org/assets/homepage/main-logo.svg
 ---
 
 ## Introduction
