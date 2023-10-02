@@ -28,7 +28,7 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
 
 
 {% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+  {% include archive-single-origin.html %}
 {% endfor %}
 
 
