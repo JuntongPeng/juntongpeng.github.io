@@ -23,6 +23,12 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
 ## Project Experience
 
 
+
 ## Teaching Assistance
+
+
+{% for post in site.teaching reversed %}
+  {% include archive-single.html %}
+{% endfor %}
 
 
