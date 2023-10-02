@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Data Science"
+title: "CS1108: Introduction to Data Science"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/datascience
