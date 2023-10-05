@@ -77,6 +77,7 @@
       {% endif %} 
     {% endif %}
     <p>
+ 
     {% if post.citation and post.paperurl %}
       Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a>
     {% elsif post.citation %}
@@ -84,6 +85,7 @@
     {% elsif post.paperurl %}
       <i class="fas fa-file-alt" aria-hidden="true"></i> <a href="{{ post.paperurl }}"><u>arXiv</u></a>
     {% endif %}
+
     </p>
     </div>
     </div>
