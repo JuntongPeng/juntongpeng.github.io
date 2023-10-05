@@ -76,13 +76,15 @@
         <p>Submitted to <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
       {% endif %} 
     {% endif %}
+    <p>
     {% if post.citation and post.paperurl %}
-      <p>Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a></p>
+      Recommended citation: {{ post.citation }} <a href="{{ post.paperurl }}"><u>{{ post.paperurl }}</u></a>
     {% elsif post.citation %}
-      <p>Recommended citation: {{ post.citation }} </p>
+      Recommended citation: {{ post.citation }}
     {% elsif post.paperurl %}
-      <p><i class="fas fa-file-alt" aria-hidden="true"></i> <a href="{{ post.paperurl }}"><u>arXiv</u></a></p>
+      <i class="fas fa-file-alt" aria-hidden="true"></i> <a href="{{ post.paperurl }}"><u>arXiv</u></a>
     {% endif %}
+    </p>
     </div>
     </div>
   </article>
