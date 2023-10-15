@@ -6,4 +6,5 @@ title: "CV"
 layout: "archive"
 ---
 
-<object data="files/CV-Juntong.pdf" height="100%" width="100%"></object>
+
+<embed src="files/CV-Juntong.pdf" type="application/pdf" width="100%" height="100%" />
