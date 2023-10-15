@@ -23,7 +23,8 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
 ## RoboCup Small Size League
 
 I'm one of the core members of SRC, the team representing Shanghai Jiao Tong University in [RoboCup](https://www.robocup.org/) [SSL](https://www.robocup.org/leagues/7) since 2021. Small Size League in RoboCup soccer competition emphasizes **collaboration* of all the robots more, than single agents manipulations.
-I'm contributing to both electornic design and algorithm development. We experienced great challenges in the past a few years but we are now making technical updates to make our team competitve worldwide again.
+
+We experienced great challenges in the past a few years but we are now making technical updates to make our team competitve worldwide again. I'm contributing to both electornic design and algorithm development. 
 
 
 ## Teaching Assistance
