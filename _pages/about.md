@@ -19,6 +19,9 @@ I spent the summer this year at the [IDEAS Lab](https://ideas.cs.purdue.edu/), [
   {% assign i =  i | plus: 1  %}
 {% endfor %}
 
+## Acadmeic Service
+
+I served as a reviewer of IEEE Robotics and Automation Letters (RA-L) since 2023.
 
 ## Robotics Competition
 
