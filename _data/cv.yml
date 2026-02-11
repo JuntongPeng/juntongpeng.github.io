@@ -1,0 +1,44 @@
+cv:
+  name: Juntong Peng
+  label: Ph.D. Student
+  email: juntongpeng@outlook.com
+  location: West Lafayette, IN
+  image: ""
+  summary: Ph.D. student at Purdue ECE working on autonomous driving and computer vision.
+
+  social_networks:
+    - network: GitHub
+      username: juntongpeng
+
+  sections:
+    Education:
+      - institution: Purdue University
+        location: West Lafayette, IN
+        area: Electrical and Computer Engineering
+        studyType: Ph.D.
+        start_date: 2024
+        end_date: present
+        highlights:
+          - "Co-advised by Prof. Yaobin Chen and Prof. Ziran Wang"
+
+      - institution: Shanghai Jiao Tong University
+        location: Shanghai, China
+        area: Information Engineering
+        studyType: B.Eng.
+        start_date: 2020
+        end_date: 2024
+        highlights:
+          - "Advised by Prof. Siheng Chen"
+
+    Experience:
+      - company: Corporate Research, Robert Bosch GmbH
+        position: Strategic Intern
+        start_date: 2024-01
+        end_date: 2024-06
+        summary: Working on the topic of reliable distributed system for V2X collaboration.
+
+      - company: Department of Computer Science, Purdue University
+        position: Research Intern
+        start_date: 2023-06
+        end_date: 2023-08
+        summary: Research on multi-robot task allocation, advised by Prof. Aniket Bera.
