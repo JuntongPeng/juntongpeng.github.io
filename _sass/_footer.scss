@@ -11,6 +11,10 @@ footer.fixed-bottom {
     padding-top: 9px;
     padding-bottom: 8px;
     text-align: center;
+
+    #goatcounter-visitors {
+      color: var(--global-footer-text-color);
+    }
   }
 
   a {
