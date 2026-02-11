@@ -9,6 +9,19 @@
   {% if site.last_updated %}
     Last updated: {{ 'now' | date: '%B %d, %Y' }}.
   {% endif %}
+  <br>
+  <span id="goatcounter-visitors">Unique visitors since Feb. 2026: <span id="gc-count">...</span></span>
+  <script data-goatcounter="https://andypjt02.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+  <script>
+    fetch('https://andypjt02.goatcounter.com/counter//TOTAL.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) {
+        var el = document.getElementById('gc-count');
+        if (el && data.count) el.textContent = data.count;
+      })
+      .catch(function() {});
+  </script>
 {% endcapture %}
 
 {% if site.footer_fixed %}
