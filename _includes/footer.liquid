@@ -16,12 +16,14 @@
   <script data-goatcounter="https://andypjt02.goatcounter.com/count"
           async src="//gc.zgo.at/count.js"></script>
   <script>
-    fetch('https://andypjt02.goatcounter.com/counter//TOTAL.json')
+    fetch('https://andypjt02.goatcounter.com/counter/TOTAL.json')
       .then(function(r) { return r.json(); })
       .then(function(data) {
         var el = document.getElementById('gc-count');
         /* If data.count is '0', it will be set. "0" is string so truthy */
-        if (el && data.count) el.textContent = data.count;
+        if (el && data.count) {
+          el.textContent = data.count_unique || data.count;
+        }
       })
       .catch(function() {});
   </script>
