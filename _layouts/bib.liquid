@@ -1,9 +1,18 @@
 ---
 ---
+{% assign is_publications_page = false %}
+{% if page.url == '/publications/' %}
+  {% assign is_publications_page = true %}
+{% endif %}
+
 <div class="row">
   {% assign has_preview = false %}
   {% if entry.preview and entry.preview != blank %}
     {% assign has_preview = true %}
+  {% endif %}
+
+  {% if is_publications_page %}
+    {% assign has_preview = false %}
   {% endif %}
 
   {% if site.enable_publication_thumbnails and has_preview %}
@@ -59,7 +68,7 @@
   {% endif %}
 
   <div id="{{ entry.key }}" class="{{ main_col_class }}">
-    {% if site.enable_publication_thumbnails and has_preview == false %}
+    {% if site.enable_publication_thumbnails and has_preview == false and is_publications_page == false %}
       {%- if entry.abbr -%}
         <div class="abbr" style="float: left; margin-bottom: 0.5rem; margin-right: 1rem;">
           {%- if site.data.venues[entry.abbr] -%}
@@ -86,7 +95,46 @@
       {% endif %}
     {% endif %}
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="title">
+      {%- if is_publications_page and entry.abbr -%}
+        {%- if site.data.venues[entry.abbr] -%}
+          {% assign venue_style = null %}
+          {% if site.data.venues[entry.abbr].color != blank %}
+            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
+          {%- endif -%}
+          <abbr
+            class="badge rounded"
+            {% if venue_style %}
+              {{ venue_style }}
+            {% endif -%}
+            style="font-size: 0.8rem; margin-right: 0.5rem; vertical-align: middle;"
+          >
+            {% if site.data.venues[entry.abbr].url %}
+              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
+            {% else %}
+              <div>{{- entry.abbr -}}</div>
+            {% endif %}
+          </abbr>
+        {% else %}
+          <abbr class="badge rounded" style="font-size: 0.8rem; margin-right: 0.5rem; vertical-align: middle;">{{ entry.abbr }}</abbr>
+        {% endif %}
+      {%- endif -%}
+      {{ entry.title }}
+      {%- if is_publications_page -%}
+        {% if entry.abstract %}
+          <a class="abstract btn btn-sm z-depth-0" role="button" style="font-size: 0.7rem; padding: 0.1rem 0.4rem; margin-left: 0.5rem; vertical-align: middle;">Abs</a>
+        {% endif %}
+        {% if entry.arxiv %}
+          <a
+            href="http://arxiv.org/abs/{{ entry.arxiv }}"
+            class="btn btn-sm z-depth-0"
+            role="button"
+            style="font-size: 0.7rem; padding: 0.1rem 0.4rem; margin-left: 0.5rem; vertical-align: middle;"
+            >arXiv</a
+          >
+        {% endif %}
+      {%- endif -%}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -232,13 +280,13 @@
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
         </a>
       {% endif %}
-      {% if entry.abstract %}
+      {% if entry.abstract and is_publications_page == false %}
         <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
-      {% if entry.arxiv %}
+      {% if entry.arxiv and is_publications_page == false %}
         <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {% endif %}
       {% if entry.hal %}
