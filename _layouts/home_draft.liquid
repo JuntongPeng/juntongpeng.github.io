@@ -1,0 +1,97 @@
+---
+layout: default
+---
+{% assign home = site.pages | where: 'permalink', '/' | first %}
+{% assign profile = home.profile %}
+
+<div class="home-draft home-draft--{{ page.variant | default: 'quiet' }}">
+  <div class="home-draft__switcher" aria-label="Homepage style drafts">
+    <a href="{{ '/' | relative_url }}">current</a>
+    <a
+      href="{{ '/style-drafts/quiet/' | relative_url }}"
+      {% if page.variant == 'quiet' %}
+        aria-current="page"
+      {% endif %}
+    >
+      A
+    </a>
+    <a
+      href="{{ '/style-drafts/signal/' | relative_url }}"
+      {% if page.variant == 'signal' %}
+        aria-current="page"
+      {% endif %}
+    >
+      B
+    </a>
+    <a
+      href="{{ '/style-drafts/studio/' | relative_url }}"
+      {% if page.variant == 'studio' %}
+        aria-current="page"
+      {% endif %}
+    >
+      C
+    </a>
+  </div>
+
+  <section class="home-draft__hero">
+    <div class="home-draft__intro">
+      <p class="home-draft__subtitle">{{ home.subtitle }}</p>
+      <h1 class="home-draft__title">
+        {% if site.title == 'blank' %}
+          <span>{{ site.first_name }}</span>
+          {% if site.middle_name %}{{ site.middle_name }}{% endif %}
+          {{ site.last_name }}
+        {% else %}
+          {{ site.title }}
+        {% endif %}
+      </h1>
+      <div class="home-draft__bio">{{ home.content | markdownify }}</div>
+
+      {% if home.social %}
+        <div class="home-draft__social">
+          <div class="contact-icons">{% social_links %}</div>
+          <div class="contact-note">{{ site.contact_note }}</div>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if profile and profile.image %}
+      <aside class="home-draft__portrait" aria-label="Profile photo">
+        {% assign profile_image_path = profile.image | prepend: 'assets/img/' %}
+        {% capture sizes %}(min-width: {{ site.max_width }}) 320px, (min-width: 576px) 38vw, 92vw{% endcapture %}
+        {% include figure.liquid
+          loading="eager"
+          path=profile_image_path
+          class="img-fluid"
+          sizes=sizes
+          alt=profile.image
+          cache_bust=true
+        %}
+        {% if profile.more_info %}
+          <div class="home-draft__more-info">{{ profile.more_info }}</div>
+        {% endif %}
+      </aside>
+    {% endif %}
+  </section>
+
+  {% if home.announcements and home.announcements.enabled %}
+    <section class="home-draft__section">
+      <h2><a href="{{ '/news/' | relative_url }}">news</a></h2>
+      {% include news.liquid limit=true %}
+    </section>
+  {% endif %}
+
+  {% if home.latest_posts and home.latest_posts.enabled %}
+    <section class="home-draft__section">
+      <h2><a href="{{ '/blog/' | relative_url }}">latest posts</a></h2>
+      {% include latest_posts.liquid %}
+    </section>
+  {% endif %}
+
+  {% if home.selected_papers %}
+    <section class="home-draft__section home-draft__section--publications">
+      <h2><a href="{{ '/publications/' | relative_url }}">selected publications</a></h2>
+      {% include selected_papers.liquid %}
+    </section>
+  {% endif %}
+</div>
