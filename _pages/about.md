@@ -20,7 +20,7 @@ latest_posts:
   enabled: false
 ---
 
-Hi! I am a second-year Ph.D. student in Purdue ECE, co-advised by Prof. Yaobin Chen and [Prof. Ziran Wang](https://ziranw.github.io/).
+Hi! I am a second-year Ph.D. student in Purdue ECE, co-advised by [Prof. Yaobin Chen](https://engineering.purdue.edu/ECE/People/ptProfile?resource_id=296665&photo=right) and [Prof. Ziran Wang](https://ziranw.github.io/).
 
 I received my bachelor degree in information engineering from [Shanghai Jiao Tong University](https://en.sjtu.edu.cn), advised by [Prof. Siheng Chen](https://siheng-chen.github.io). I have also spent a wonderful summer at the [Department of Computer Science, Purdue University](https://www.cs.purdue.edu) as a research intern, advised by [Prof. Aniket Bera](https://www.cs.purdue.edu/homes/ab/).
 
