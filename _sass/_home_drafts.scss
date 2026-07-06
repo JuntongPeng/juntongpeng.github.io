@@ -219,7 +219,7 @@
   }
 
   .home-draft__hero {
-    grid-template-columns: minmax(245px, 0.68fr) minmax(0, 1fr);
+    grid-template-columns: minmax(245px, 0.56fr) minmax(0, 1fr);
     grid-template-areas: "portrait intro";
     gap: clamp(2rem, 5vw, 4rem);
     padding: clamp(1rem, 3vw, 1.5rem);
@@ -264,16 +264,16 @@
   }
 
   .home-draft__title {
-    max-width: 11ch;
+    max-width: 14ch;
     margin-bottom: clamp(1.25rem, 2.5vw, 2rem);
     color: #1d1d1f;
-    font-size: clamp(2.85rem, 6.4vw, 5.8rem);
+    font-size: clamp(2.5rem, 4.7vw, 4.45rem);
     font-weight: 700;
-    line-height: 0.94;
+    line-height: 0.98;
   }
 
   .home-draft__bio {
-    max-width: 42rem;
+    max-width: 50rem;
 
     p {
       color: #2f3135;
@@ -289,6 +289,35 @@
 
   .home-draft__social {
     margin-top: 2rem;
+
+    .home-social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .home-social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 2.35rem;
+      height: 2.35rem;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 999px;
+      padding: 0 0.72rem;
+      background: rgba(255, 255, 255, 0.65);
+      color: #1d1d1f;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .home-social-link--scholar {
+      gap: 0.48rem;
+      color: var(--draft-accent);
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
 
     .contact-icons {
       gap: 0.65rem;
@@ -355,6 +384,16 @@ html[data-theme="dark"] {
       border-color: rgba(255, 255, 255, 0.12);
       background: rgba(35, 35, 38, 0.66);
       color: #f5f5f7;
+    }
+
+    .home-draft__social .home-social-link {
+      border-color: rgba(255, 255, 255, 0.12);
+      background: rgba(35, 35, 38, 0.66);
+      color: #f5f5f7;
+    }
+
+    .home-draft__social .home-social-link--scholar {
+      color: #2997ff;
     }
 
     .home-draft__section--publications .publications ol.bibliography li {

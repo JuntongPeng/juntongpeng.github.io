@@ -1,0 +1,32 @@
+{% assign socials = site.data.socials %}
+
+<div class="home-social-links">
+  {% if socials.scholar_userid %}
+    <a
+      class="home-social-link home-social-link--scholar"
+      href="https://scholar.google.com/citations?user={{ socials.scholar_userid }}"
+      aria-label="Google Scholar profile"
+    >
+      <i class="ai ai-google-scholar" aria-hidden="true"></i>
+      <span>Google Scholar</span>
+    </a>
+  {% endif %}
+
+  {% if socials.github_username %}
+    <a class="home-social-link" href="https://github.com/{{ socials.github_username }}" aria-label="GitHub profile">
+      <i class="fa-brands fa-github" aria-hidden="true"></i>
+    </a>
+  {% endif %}
+
+  {% if socials.email %}
+    <a class="home-social-link" href="mailto:{{ socials.email }}" aria-label="Email">
+      <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+    </a>
+  {% endif %}
+
+  {% if socials.cv_pdf %}
+    <a class="home-social-link" href="{{ socials.cv_pdf | relative_url }}" aria-label="CV">
+      <i class="ai ai-cv" aria-hidden="true"></i>
+    </a>
+  {% endif %}
+</div>

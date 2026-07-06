@@ -19,7 +19,7 @@ layout: default
 
         {% if page.social %}
           <div class="home-draft__social">
-            <div class="contact-icons">{% social_links %}</div>
+            {% include home_social_links.liquid %}
             <div class="contact-note">{{ site.contact_note }}</div>
           </div>
         {% endif %}
