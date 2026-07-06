@@ -31,6 +31,12 @@ cv:
           - "Advised by Prof. Siheng Chen"
 
     Experience:
+      - company: Toyota Motor North America
+        position: Research Intern
+        start_date: 2025/05
+        end_date: 2025/08
+        summary: Worked on FleetAgent, a teleoperation assistant for autonomous fleets.
+
       - company: Corporate Research, Robert Bosch GmbH
         position: Strategic Intern
         start_date: 2024-01

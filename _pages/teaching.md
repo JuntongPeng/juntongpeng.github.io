@@ -14,6 +14,9 @@ nav_order: 3
     <div class="service-teaching__chips" aria-label="Reviewing venues">
       <span>ICRA</span>
       <span>ICLR</span>
+      <span>ECCV</span>
+      <span>NeurIPS</span>
+      <span>IROS</span>
       <span>T-RO</span>
       <span>T-ASE</span>
       <span>T-ITS</span>
@@ -28,6 +31,14 @@ nav_order: 3
       <h2>Teaching Assistant</h2>
       <p class="service-teaching__role">CS1108 - Introduction to Data Science</p>
       <p class="service-teaching__meta">Fall 2023</p>
+    </article>
+
+    <article class="service-teaching__item">
+      <p class="service-teaching__eyebrow">Internship</p>
+      <h2>Research Intern</h2>
+      <p class="service-teaching__role">Toyota Motor North America</p>
+      <p class="service-teaching__meta">2025/05 - 2025/08</p>
+      <p>Worked on FleetAgent, a teleoperation assistant for autonomous fleets.</p>
     </article>
 
     <article class="service-teaching__item">
