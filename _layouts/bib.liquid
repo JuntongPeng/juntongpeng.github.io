@@ -129,9 +129,10 @@
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
+      {% assign author_fold_threshold = site.min_author_count_to_fold | default: 10 %}
 
       {% assign author_array_limit = author_array_size %}
-      {% if site.max_author_limit and author_array_size > site.max_author_limit %}
+      {% if site.max_author_limit and author_array_size >= author_fold_threshold and author_array_size > site.max_author_limit %}
         {% assign author_array_limit = site.max_author_limit %}
       {% endif %}
 
