@@ -52,7 +52,13 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{
+      },{id: "news-quantv2x-a-fully-quantized-multi-agent-system-for-cooperative-perception-was-accepted-to-eccv-2026",
+          title: 'QuantV2X: A Fully Quantized Multi-Agent System for Cooperative Perception was accepted to ECCV...',
+          description: "",
+          section: "News",},{id: "news-four-papers-were-accepted-to-iros-2026-fleetagent-omniv2x-vilad-and-efficient-and-explainable-end-to-end-autonomous-driving-via-masked-vision-language-action-diffusion",
+          title: 'Four papers were accepted to IROS 2026: FleetAgent, OmniV2X, ViLaD, and Efficient and...',
+          description: "",
+          section: "News",},{
         id: 'social-cv',
         title: 'CV',
         section: 'Socials',
