@@ -9,7 +9,6 @@ group :jekyll_plugins do
     gem 'jekyll-cache-bust'
     gem 'jekyll-email-protect'
     gem 'jekyll-feed'
-    gem 'jekyll-get-json'
     gem 'jekyll-imagemagick'
     gem 'jekyll-jupyter-notebook'
     gem 'jekyll-link-attributes'
@@ -28,11 +27,9 @@ group :jekyll_plugins do
     gem 'classifier-reborn'  # used for content categorization during the build
 end
 
-# Gems for development or external data fetching (outside :jekyll_plugins)
+# Gems for development (outside :jekyll_plugins)
 group :other_plugins do
     gem 'css_parser'
-    gem 'feedjira'
-    gem 'httparty'
     gem 'observer'       # used by jekyll-scholar
     gem 'ostruct'        # used by jekyll-twitter-plugin
     # gem 'terser'         # used by jekyll-terser

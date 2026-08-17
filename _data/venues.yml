@@ -1,9 +1,33 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+"IROS":
+  url: https://www.iros-conference.org/
+  color: "#1B4F8A"
+"CVPR":
+  url: https://cvpr.thecvf.com/
+  color: "#2E86AB"
+"ECCV":
+  url: https://www.ecva.net/
+  color: "#7D5BA6"
+"ITSC":
+  url: https://www.itssc.org/
+  color: "#C0661D"
+"ICDM":
+  url: https://ieee-icdm.org/
+  color: "#B8860B"
+"EMNLP":
+  url: https://2025.emnlp.org/
+  color: "#1F8A70"
+"RA-L":
+  url: https://www.ieee-ras.org/
+  color: "#4E7A5A"
+"Proc. IEEE":
+  url: https://www.proceedings-of-the-ieee.org/
+  color: "#A93226"
+"ACM TIOT":
+  url: https://dl.acm.org/journal/tiot
+  color: "#8A5A44"
+"Preprint":
+  url: https://arxiv.org/
+  color: "#757575"
+"Report":
+  url: https://docs.lib.purdue.edu/
+  color: "#5D6D7E"
