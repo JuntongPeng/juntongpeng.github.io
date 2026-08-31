@@ -36,6 +36,9 @@ ninja.data = [{
           section: "News",},{id: "news-four-papers-were-accepted-to-iros-2026-fleetagent-omniv2x-vilad-and-efficient-and-explainable-end-to-end-autonomous-driving-via-masked-vision-language-action-diffusion",
           title: 'Four papers were accepted to IROS 2026: FleetAgent, OmniV2X, ViLaD, and Efficient and...',
           description: "",
+          section: "News",},{id: "news-vlm-dc-vision-language-model-for-automotive-data-collection-was-accepted-for-publication-in-the-ieee-internet-of-things-journal",
+          title: 'VLM-DC: Vision Language Model for Automotive Data Collection was accepted for publication in...',
+          description: "",
           section: "News",},{
         id: 'social-cv',
         title: 'CV',
