@@ -1,8 +1,11 @@
 ---
-layout: page
+layout: page_preview
 permalink: /teaching/
-title: service & teaching
-description: Reviewing and teaching activities.
+preview_section: teaching
+editorial: true
+title: Service & Teaching
+heading: Service & Teaching.
+description: Academic service, teaching, and research experience.
 nav: true
 nav_order: 3
 ---

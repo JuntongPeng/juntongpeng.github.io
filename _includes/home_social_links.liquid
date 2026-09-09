@@ -8,7 +8,7 @@
       aria-label="Google Scholar profile"
     >
       <i class="ai ai-google-scholar" aria-hidden="true"></i>
-      <span>Google Scholar</span>
+      {% if page.editorial %}<span><span class="home-social-google">Google </span>Scholar</span>{% else %}<span>Google Scholar</span>{% endif %}
     </a>
   {% endif %}
 

@@ -1,0 +1,88 @@
+// Phone and compact navigation refinements, isolated to the preview routes.
+@media screen and (max-width: 991.98px) {
+  .page-home-preview {
+    padding-bottom: 0;
+    footer.fixed-bottom { position: static; padding-bottom: env(safe-area-inset-bottom, 0px); }
+  }
+  .page-home-preview #navbar {
+    .navbar-toggler { min-width: 44px; min-height: 44px; }
+    .navbar-collapse { max-height: calc(100vh - 64px); max-height: calc(100dvh - 64px); overflow-y: auto; text-align: left !important; }
+    .navbar-nav { padding-block: 0.5rem; }
+    .nav-link { display: flex; align-items: center; min-height: 44px; }
+    #search-toggle, #light-toggle { min-width: 44px; min-height: 44px; transform: none; }
+    #search-toggle .nav-link { font-size: 0; i { font-size: 1rem; } }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .page-home-preview {
+    > .container--home { margin-top: 1.5rem !important; }
+    #back-to-top { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; svg { margin: 0; } }
+    .home-draft--editorial .home-draft__portrait { order: 0; }
+    .home-draft--editorial .publications ol.bibliography li .links a.btn,
+    .preview-page .publications ol.bibliography li .links a.btn,
+    .preview-page .publications ol.bibliography li .title a.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      padding: 0.6rem 0.85rem;
+    }
+    .preview-page__back { min-height: 44px; margin-bottom: 1rem; }
+    .preview-page .cv .date-column { transform: none; }
+    .preview-page .cv .card .list-group-item .badge {
+      background: var(--preview-surface) !important;
+      color: var(--global-text-color) !important;
+      box-shadow: none;
+      font-size: 0.8125rem;
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .page-home-preview {
+    .home-draft--editorial {
+      .home-draft__masthead {
+        grid-template-columns: minmax(0, 1fr) clamp(4.5rem, 20vw, 6rem);
+        align-items: center;
+        gap: 1.25rem 1rem;
+      }
+      .home-draft__identity { display: contents; }
+      .home-draft__subtitle { grid-column: 1 / -1; margin: 0; }
+      .home-draft__title { grid-column: 1; grid-row: 2; font-size: clamp(1.75rem, 8.3vw, 2.75rem); }
+      .home-draft__family { font-size: 0.9em; margin-top: 0.45em; }
+      .home-draft__social { grid-column: 1 / -1; grid-row: 3; margin: 0; }
+      .home-draft__social .home-social-links { display: grid; grid-template-columns: minmax(0, 1fr) repeat(3, 44px); gap: 0.5rem; }
+      .home-social-google { display: none; }
+      .home-social-link--scholar { width: 100%; padding-inline: 0.5rem; &::after { content: none; } }
+      .home-draft__portrait {
+        grid-column: 2; grid-row: 2; width: 100%; max-width: none; margin: 0; transform: none;
+        figure { padding: 0; margin-bottom: 0; background: transparent; box-shadow: none; border-radius: 12px; overflow: hidden; }
+        img { aspect-ratio: 1; object-fit: cover; object-position: center 30%; border-radius: 12px; }
+      }
+      .home-draft__portrait-caption { display: none; }
+      .publications ol.bibliography li .preview { padding: 0.35rem; }
+    }
+    .preview-page__header { margin-bottom: 1.5rem; }
+    .preview-page #bibsearch { margin-bottom: 2rem; }
+    .preview-page .cv .date-column .table-cv { margin-bottom: 0; }
+    .preview-page .cv .location { margin-bottom: 0; }
+    .preview-page .cv .card > .table-cv {
+      tbody, tr, td { display: block; }
+      tr + tr { margin-top: 0.75rem; }
+      td { padding: 0 !important; }
+      td + td { margin-top: 0.2rem; }
+    }
+    .home-draft--editorial .news, .preview-page .news {
+      .table-responsive { overflow: visible; }
+      table, tbody { display: block; width: 100%; }
+      tr { display: grid; grid-template-columns: minmax(0, 1fr); padding-block: 1.25rem; border-bottom: 1px solid var(--global-divider-color); }
+      tr + tr { border-top: 0; }
+      tr:first-child { padding-top: 0; }
+      th, td { width: auto !important; min-width: 0; padding: 0; border: 0; }
+      th { margin-bottom: 0.4rem; font: 0.8125rem/1.8 ui-monospace, monospace; }
+      td { font-size: 0.9375rem; line-height: 1.8; overflow-wrap: anywhere; }
+    }
+  }
+}

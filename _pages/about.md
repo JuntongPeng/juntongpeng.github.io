@@ -1,5 +1,7 @@
 ---
-layout: about
+layout: about_preview
+editorial: true
+chinese_name: 彭钧桐
 title: about
 permalink: /
 subtitle: Ph.D. Student, Purdue ECE

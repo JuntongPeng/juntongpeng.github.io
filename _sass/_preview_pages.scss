@@ -1,0 +1,192 @@
+// Shared subpage system for the isolated /preview/ routes.
+.page-home-preview {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  #navbar .nav-link { padding-inline: 0.75rem; }
+  #navbar a:focus-visible, #navbar button:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
+}
+
+.preview-page {
+  --preview-muted: #666964;
+  --preview-surface: #f0f0ed;
+  --preview-paper: #fff;
+  padding: 1rem 0 4rem;
+  a { text-underline-offset: 4px; }
+  a:focus-visible, input:focus-visible, [role="button"]:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 4px; }
+
+  &__header { border-bottom: 1px solid var(--global-divider-color); padding-bottom: 2.5rem; margin-bottom: 3rem; }
+  &__back { display: inline-flex; align-items: center; gap: 0.65rem; color: var(--preview-muted); font: 0.8125rem ui-monospace, monospace; margin-bottom: 2rem; }
+  &__heading-row { display: flex; align-items: end; justify-content: space-between; gap: 2rem; }
+  &__header h1 {
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 4.75rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.065em;
+    overflow-wrap: normal;
+  }
+  &__description { max-width: 42rem; color: var(--preview-muted); font-size: 1rem; line-height: 1.8; margin: 1.4rem 0 0; }
+  &__download { display: inline-flex; align-items: center; gap: 1.5rem; padding: 0.75rem 0; color: var(--global-text-color); border-bottom: 1px solid currentColor; font-size: 0.9375rem; white-space: nowrap; }
+  &__download span { transition: transform 250ms ease; }
+  &__download:hover span { transform: translate(2px, -2px); }
+
+  .preview-search-label { display: block; font: 0.8125rem ui-monospace, monospace; color: var(--preview-muted); margin-bottom: 0.75rem; }
+  #bibsearch {
+    display: block;
+    width: 100%;
+    max-width: 42rem;
+    height: 3.25rem;
+    padding: 0.75rem 1rem;
+    margin: 0 0 3rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 6px;
+    background: var(--preview-paper);
+    color: var(--global-text-color);
+    font-size: 1rem;
+    &::placeholder { color: var(--preview-muted); }
+  }
+  .publications {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr);
+    gap: 2rem 3rem;
+    margin-top: 0;
+    h2.bibliography {
+      margin: 0;
+      padding: 1rem 0;
+      text-align: left;
+      color: var(--preview-muted);
+      font: italic 2.5rem "Iowan Old Style", Georgia, serif;
+      letter-spacing: -0.05em;
+      border-top: 1px solid var(--global-divider-color);
+      align-self: start;
+    }
+    ol.bibliography { margin: 0; padding: 0; }
+    ol.bibliography li {
+      margin: 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--global-divider-color);
+      > .row { margin-inline: 0; }
+      .row > .col-sm-12 { padding-inline: 0; }
+      .title { font-size: 1.125rem; line-height: 1.6; font-weight: 600; letter-spacing: -0.02em; }
+      .author { margin-top: 0.6rem; color: var(--preview-muted); font-size: 0.875rem; line-height: 1.8; }
+      .periodical { margin-top: 0.4rem; font-size: 0.875rem; line-height: 1.7; }
+      .links a.btn, .title a.btn {
+        margin-top: 0.5rem;
+        margin-right: 0.35rem;
+        padding: 0.3rem 0.7rem;
+        font-size: 0.8125rem;
+        text-transform: none;
+        border: 1px solid var(--global-divider-color);
+        border-radius: 999px;
+        color: var(--global-text-color);
+        &:hover { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+      }
+      .title .badge { font-size: 0.75rem !important; font-weight: 500; padding: 0.35rem 0.5rem; border-radius: 3px !important; }
+      .hidden.open { padding: 0.5rem 1rem; background: var(--preview-surface); border-radius: 4px; border-color: var(--global-divider-color) !important; }
+    }
+  }
+  // These must remain hidden when bibliography filtering is active.
+  .publications .unloaded { display: none !important; }
+
+  .service-teaching { margin: 0; }
+  .service-teaching__section {
+    padding: 0 0 2.5rem;
+    border: 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    border-radius: 0;
+    background: transparent;
+    h2 { font-size: 2rem; font-weight: 500; letter-spacing: -0.04em; margin-bottom: 1.5rem; }
+  }
+  .service-teaching__eyebrow { margin-bottom: 0.75rem; color: var(--preview-muted); font: 0.75rem ui-monospace, monospace; letter-spacing: 0.08em; text-transform: uppercase; }
+  .service-teaching__chips {
+    gap: 0.75rem;
+    margin-top: 0;
+    span { border: 1px solid var(--global-divider-color); background: var(--preview-paper); color: var(--global-text-color); padding: 0.7rem 1rem; font-size: 0.9375rem; font-weight: 500; }
+  }
+  .service-teaching__grid { display: block; margin: 1rem 0 0; }
+  .service-teaching__item {
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 0.5rem 3rem;
+    padding: 2rem 0;
+    border: 0;
+    border-bottom: 1px solid var(--global-divider-color);
+    border-radius: 0;
+    background: transparent;
+    > * { grid-column: 2; margin: 0; }
+    > .service-teaching__eyebrow { grid-column: 1; grid-row: 1 / span 5; padding-top: 0.3rem; }
+    h2 { font-size: 1.5rem; font-weight: 500; letter-spacing: -0.035em; }
+    .service-teaching__role { font-size: 1.0625rem; font-weight: 500; }
+    .service-teaching__meta { color: var(--preview-muted); font-size: 0.875rem; }
+    > p:last-child:not(.service-teaching__meta) { margin-top: 0.5rem; color: var(--preview-muted); line-height: 1.8; }
+  }
+
+  .news {
+    .table { margin: 0; }
+    th, td { padding: 1.5rem 0; line-height: 1.8; font-size: 1rem; border-bottom: 1px solid var(--global-divider-color); }
+    th { font: 0.8125rem/1.8 ui-monospace, monospace; color: var(--preview-muted); padding-right: 2rem; min-width: 8.5rem; }
+  }
+  .cv {
+    .card {
+      display: grid;
+      grid-template-columns: 13rem minmax(0, 1fr);
+      gap: 1.5rem 3rem;
+      padding: 2rem 0 !important;
+      margin: 0 !important;
+      border: 0;
+      border-bottom: 1px solid var(--global-divider-color);
+      border-radius: 0;
+      box-shadow: none;
+      background: transparent;
+      > .card-title { font-size: 1.35rem; font-weight: 500; letter-spacing: -0.03em; margin: 0; }
+      > :not(.card-title) { min-width: 0; }
+      > p { font-size: 1rem; line-height: 1.8; margin: 0; }
+    }
+    .list-group-item { padding: 1.5rem 0; background: transparent; border-color: var(--global-divider-color); &:first-child { padding-top: 0; } &:last-child { padding-bottom: 0; } }
+    .list-group-item > .row { margin-inline: 0; }
+    .date-column { flex: 0 0 25%; max-width: 25%; text-align: left !important; padding: 0; }
+    .date-column + div { flex: 0 0 75%; max-width: 75%; padding: 0; }
+    .badge { background: var(--preview-surface) !important; color: var(--global-text-color) !important; font-size: 0.75rem; font-weight: 500 !important; white-space: normal; line-height: 1.6; text-align: left; }
+    .location { white-space: normal; font-size: 0.8125rem; color: var(--preview-muted); margin-top: 0.5rem; }
+    h6 { line-height: 1.65; }
+    .table-cv { width: 100%; td { overflow-wrap: anywhere; } }
+    ul { line-height: 1.8; }
+  }
+}
+
+html[data-theme="dark"] .preview-page {
+  --preview-muted: #a6aaa8;
+  --preview-surface: #26292a;
+  --preview-paper: #222425;
+  .service-teaching__section, .service-teaching__item { background: transparent; }
+  .service-teaching__chips span { background: var(--preview-paper); border-color: var(--global-divider-color); }
+}
+@media (max-width: 850px) {
+  .preview-page {
+    .publications { grid-template-columns: 5rem minmax(0, 1fr); gap: 1.5rem; }
+    .service-teaching__item { grid-template-columns: 9rem minmax(0, 1fr); gap: 0.5rem 1.5rem; }
+    .cv .card { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  }
+}
+@media (max-width: 575.98px) {
+  .preview-page {
+    padding-top: 0;
+    &__header { padding-bottom: 1.75rem; margin-bottom: 2rem; }
+    &__back { margin-bottom: 1.5rem; }
+    &__heading-row { display: block; }
+    &__download { margin-top: 1.25rem; }
+    .publications { display: block; h2.bibliography { margin-top: 2rem; padding-bottom: 1rem; } }
+    .service-teaching__item { display: block; > * + * { margin-top: 0.65rem; } }
+    .news th { min-width: 5.5rem; padding-right: 1rem; }
+    .news td { font-size: 0.9375rem; }
+    .cv .date-column, .cv .date-column + div { flex: 0 0 100%; max-width: 100%; }
+    .cv .date-column + div { margin-top: 0.75rem !important; }
+    .cv .table-cv td { font-size: 0.875rem; }
+    .cv .date-column + div .ml-1 { margin-left: 0 !important; }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .preview-page *, .preview-page *::before, .preview-page *::after { animation: none !important; transition: none !important; }
+}
+@media print {
+  .preview-page { .cv .card, .publications li, .service-teaching__item { break-inside: avoid; } }
+}

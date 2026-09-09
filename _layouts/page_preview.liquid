@@ -1,0 +1,20 @@
+---
+layout: default
+---
+{% assign editorial_base = '' %}
+{% if page.home_preview %}{% assign editorial_base = '/preview' %}{% endif %}
+<div class="preview-page preview-page--{{ page.preview_section }}">
+  <header class="preview-page__header" data-reveal>
+    <a class="preview-page__back" href="{{ editorial_base | append: '/' | relative_url }}"><span aria-hidden="true">↖</span> Juntong Peng</a>
+    <div class="preview-page__heading-row">
+      <h1>{{ page.heading }}</h1>
+      {% if page.cv_pdf %}
+        <a class="preview-page__download" href="{{ page.cv_pdf | relative_url }}" target="_blank" rel="noopener">Download CV <span aria-hidden="true">↗</span></a>
+      {% endif %}
+    </div>
+    <p class="preview-page__description">{{ page.description }}</p>
+  </header>
+  <article class="preview-page__content">
+    {{ content }}
+  </article>
+</div>

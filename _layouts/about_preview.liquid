@@ -1,0 +1,87 @@
+---
+layout: default
+---
+{% assign editorial_base = '' %}
+{% if page.home_preview %}{% assign editorial_base = '/preview' %}{% endif %}
+<div class="home-draft home-draft--editorial">
+  <article>
+    <header class="home-draft__masthead">
+      <div class="home-draft__identity">
+        <p class="home-draft__subtitle">{{ page.subtitle }}</p>
+        <h1 class="home-draft__title">
+          {% if site.title == 'blank' %}
+            <span class="home-draft__given">{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}</span>
+            <span class="home-draft__family" lang="zh-Hans"><img src="{{ '/assets/img/juntong-name-xingkai.png' | relative_url | bust_file_cache }}" alt="{{ page.chinese_name }}" width="1143" height="431"></span>
+          {% else %}
+            <span class="home-draft__given">{{ site.title }}</span>
+          {% endif %}
+        </h1>
+        {% if page.social %}
+          <div class="home-draft__social">
+            {% include home_social_links.liquid %}
+            <div class="contact-note">{{ site.contact_note }}</div>
+          </div>
+        {% endif %}
+
+      </div>
+      {% if page.profile and page.profile.image %}
+        <aside class="home-draft__portrait" aria-label="Profile photo">
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% capture sizes %}(min-width: 1120px) 280px, (min-width: 576px) 26vw, 120px{% endcapture %}
+          {% include figure.liquid
+            loading="eager"
+            path=profile_image_path
+            class="img-fluid"
+            sizes=sizes
+            alt="Portrait of Juntong Peng"
+            cache_bust=true
+          %}
+          <p class="home-draft__portrait-caption"><span>Juntong Peng</span><span>Purdue University</span></p>
+          {% if page.profile.more_info %}
+            <div class="home-draft__more-info">{{ page.profile.more_info }}</div>
+          {% endif %}
+        </aside>
+      {% endif %}
+
+    </header>
+
+    <div class="home-draft__research-line" aria-label="Research interests">
+      <span><small aria-hidden="true">01 /</small> Autonomous driving</span>
+      <span><small aria-hidden="true">02 /</small> Multi-agent intelligence</span>
+      <span><small aria-hidden="true">03 /</small> Foundation model</span>
+    </div>
+
+    <section class="home-draft__section home-draft__about" aria-labelledby="preview-about-title" data-reveal>
+      <h2 id="preview-about-title"><span class="home-draft__section-index" aria-hidden="true">01 / ABOUT</span>My Background<span class="home-draft__accent">.</span></h2>
+      <div class="home-draft__bio">{{ content }}</div>
+    </section>
+
+    {% if page.announcements and page.announcements.enabled %}
+      <section class="home-draft__section home-draft__news" aria-labelledby="preview-news-title" data-reveal>
+        <h2 id="preview-news-title"><span class="home-draft__section-index" aria-hidden="true">02 / UPDATES</span><a href="{{ editorial_base | append: '/news/' | relative_url }}">Lately<span class="home-draft__accent">.</span></a></h2>
+        {% include news.liquid limit=true %}
+      </section>
+    {% endif %}
+
+    {% if page.latest_posts and page.latest_posts.enabled %}
+      <section class="home-draft__section" data-reveal>
+        <h2><a href="{{ '/blog/' | relative_url }}">Latest posts</a></h2>
+        {% include latest_posts.liquid %}
+      </section>
+    {% endif %}
+
+    {% if page.selected_papers %}
+      <section class="home-draft__section home-draft__section--publications" aria-labelledby="preview-work-title">
+        <div class="home-draft__work-heading" data-reveal>
+          <h2 id="preview-work-title"><span class="home-draft__section-index" aria-hidden="true">03 / SELECTED WORK</span>Perceive<span class="home-draft__accent">.</span> Collaborate<span class="home-draft__accent">.</span> Act<span class="home-draft__accent">.</span></h2>
+          <a class="home-draft__all-publications" href="{{ editorial_base | append: '/publications/' | relative_url }}">All publications <span aria-hidden="true">↗</span></a>
+        </div>
+        {% include selected_papers.liquid %}
+      </section>
+    {% endif %}
+  </article>
+
+  {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}
+    {% include newsletter.liquid center=true %}
+  {% endif %}
+</div>

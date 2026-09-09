@@ -1,23 +1,18 @@
 ---
 layout: page_preview
-permalink: /publications/
+permalink: /preview/publications/
+preview_source: /publications/
 preview_section: publications
+home_preview: true
 editorial: true
 title: Publications
 heading: Research & Publications.
 description: Work on autonomous driving, computer vision, and multi-agent intelligence.
-nav: true
-nav_order: 2
+nav: false
+sitemap: false
 ---
 
-<!-- _pages/publications.md -->
-
-<!-- Bibsearch Feature -->
-
 {% include bib_search.liquid %}
-
 <div class="publications">
-
 {% bibliography %}
-
 </div>

@@ -15,7 +15,7 @@ keywords: autonomous-driving, computer-vision, collaborative-perception, purdue
 lang: en
 icon: favicon.ico
 
-url: https://juntongpeng.github.io # the base hostname & protocol for your site
+url: https://me.andypjt.xyz # the base hostname & protocol for your site
 baseurl: # leave blank for user site
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
@@ -287,6 +287,8 @@ filtered_bibtex_keywords:
     pmid,
     poster,
     preview,
+    preview_proposed,
+    preview_proposed_alt,
     selected,
     slides,
     supp,
