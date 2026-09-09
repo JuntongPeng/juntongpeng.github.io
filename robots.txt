@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://juntongpeng.github.io/sitemap.xml
+Sitemap: https://me.andypjt.xyz/sitemap.xml
