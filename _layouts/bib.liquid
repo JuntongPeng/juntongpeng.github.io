@@ -230,6 +230,9 @@
         >
         </i>
       {% endif %}
+      {%- if entry.author contains '*' or entry.author contains '∗' %}
+        <div class="author-note"><sup>*</sup> Equal contribution.</div>
+      {%- endif %}
     </div>
 
     <!-- Journal/Book title and date -->

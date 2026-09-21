@@ -1,0 +1,25 @@
+{%- comment -%}
+  Format a CV date for display.
+  Accepts: 2024 | 2024-01 | 2024-1 | 2024-01-15 | 2025/05 | present | Present
+  Outputs: 2024 | 2024.01 | 2024.01.15 | present | (empty)
+{%- endcomment -%}
+{%- assign _raw = include.date | default: '' | strip -%}
+{%- if _raw == '' -%}
+{%- elsif _raw == 'present' or _raw == 'Present' -%}
+present
+{%- else -%}
+  {%- assign _norm = _raw | replace: '/', '-' | strip -%}
+  {%- assign _parts = _norm | split: '-' -%}
+  {%- assign _year = _parts[0] | strip -%}
+  {%- if _parts.size > 1 and _parts[1] != '' -%}
+    {%- assign _month = _parts[1] | plus: 0 | prepend: '00' | slice: -2, 2 -%}
+    {%- if _parts.size > 2 and _parts[2] != '' -%}
+      {%- assign _day = _parts[2] | plus: 0 | prepend: '00' | slice: -2, 2 -%}
+      {{- _year -}}.{{- _month -}}.{{- _day -}}
+    {%- else -%}
+      {{- _year -}}.{{- _month -}}
+    {%- endif -%}
+  {%- else -%}
+    {{- _year -}}
+  {%- endif -%}
+{%- endif -%}

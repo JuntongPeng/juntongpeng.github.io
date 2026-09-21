@@ -96,6 +96,17 @@
           }
         }
 
+        .author-note {
+          margin-top: 0.15rem;
+          font-size: 0.75rem;
+          line-height: 1.4;
+          color: var(--global-text-color-light);
+
+          sup {
+            font-size: 0.65rem;
+          }
+        }
+
         > em {
           border-bottom: 1px solid;
           font-style: normal;

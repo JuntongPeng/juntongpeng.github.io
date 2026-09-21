@@ -4,7 +4,10 @@ cv:
   email: juntongpeng@outlook.com
   location: West Lafayette, IN
   image: ""
-  summary: Ph.D. student at Purdue ECE working on autonomous driving and computer vision.
+  summary: >
+    Ph.D. student in Purdue ECE working on autonomous driving, computer vision,
+    and multi-agent intelligence. Research focuses on cooperative perception,
+    vision-language-action models, and foundation models for embodied autonomy.
 
   social_networks:
     - network: GitHub
@@ -33,18 +36,98 @@ cv:
     Experience:
       - company: Toyota Motor North America
         position: Research Intern
-        start_date: 2025/05
-        end_date: 2025/08
+        start_date: 2025-05
+        end_date: 2025-08
         summary: Worked on FleetAgent, a teleoperation assistant for autonomous fleets.
 
       - company: Corporate Research, Robert Bosch GmbH
         position: Strategic Intern
         start_date: 2024-01
         end_date: 2024-06
-        summary: Working on the topic of reliable distributed system for V2X collaboration.
+        summary: Worked on reliable distributed systems for V2X collaboration.
 
       - company: Department of Computer Science, Purdue University
         position: Research Intern
         start_date: 2023-06
         end_date: 2023-08
         summary: Research on multi-robot task allocation, advised by Prof. Aniket Bera.
+
+    Publications:
+      - title: "VLM-DC: Vision Language Model for Automotive Data Collection"
+        date: 2026
+        publisher: "IEEE Internet of Things Journal (co-first author)"
+        url: https://doi.org/10.1109/JIOT.2026.3728234
+      - title: "FleetAgent: Teleoperation Assistant for Autonomous Fleets via Vectorized V2N Messages"
+        date: 2026
+        publisher: "IEEE/RSJ IROS 2026 (first author)"
+        url: https://arxiv.org/abs/2606.21222
+      - title: "OmniV2X: A Generative Foundation Planner for Efficient End-to-End Cooperative Driving"
+        date: 2026
+        publisher: "IEEE/RSJ IROS 2026 (first author)"
+        url: https://arxiv.org/abs/2606.21165
+      - title: "LLM4AD: Large Language Models for Autonomous Driving — Concept, Review, Benchmark, Experiments, and Future Trends"
+        date: 2026
+        publisher: "Proceedings of the IEEE"
+        url: https://doi.org/10.1109/JPROC.2026.3678829
+      - title: "Efficient and Explainable End-to-End Autonomous Driving via Masked Vision-Language-Action Diffusion"
+        date: 2026
+        publisher: "IEEE/RSJ IROS 2026"
+        url: https://arxiv.org/abs/2602.20577
+      - title: "A Hierarchical Test Platform for Vision Language Model (VLM)-Integrated Real-World Autonomous Driving"
+        date: 2026
+        publisher: "ACM Transactions on Internet of Things"
+        url: https://doi.org/10.1145/3769867
+      - title: "CAV Pilot Development and Deployment in Midwest Winter"
+        date: 2026
+        publisher: "Purdue University Report"
+        url: https://doi.org/10.5703/1288284318562
+      - title: "QuantV2X: A Fully Quantized Multi-Agent System for Cooperative Perception"
+        date: 2026
+        publisher: "ECCV 2026"
+        url: https://arxiv.org/abs/2509.03704
+      - title: "ViLaD: A Large Vision Language Diffusion Framework for End-to-End Autonomous Driving"
+        date: 2026
+        publisher: "IEEE/RSJ IROS 2026"
+        url: https://arxiv.org/abs/2508.12603
+      - title: "RampCast II: A Dual-Interface V2X Framework for Reliable Traffic Information Delivery"
+        date: 2025
+        publisher: "IEEE ITSC 2025"
+        url: https://doi.org/10.1109/ITSC60802.2025.11423526
+      - title: "Multi-Trajectory Prediction for E-Scooter Riders with Multi-Modal Inputs"
+        date: 2025
+        publisher: "IEEE ITSC 2025"
+        url: https://doi.org/10.1109/ITSC60802.2025.11423003
+      - title: "On-Board Vision-Language Models (VLMs) for Personalized Motion Control of Autonomous Vehicles"
+        date: 2025
+        publisher: "IEEE/RSJ IROS 2025"
+        url: https://doi.org/10.1109/IROS60139.2025.11246750
+      - title: "Communication-Efficient Multi-Agent 3D Detection via Hybrid Collaboration"
+        date: 2025
+        publisher: "arXiv preprint (co-first author)"
+        url: https://arxiv.org/abs/2508.07092
+      - title: "Generative AI for Autonomous Driving: Frontiers and Opportunities"
+        date: 2025
+        publisher: "arXiv preprint"
+        url: https://arxiv.org/abs/2505.08854
+      - title: "DASR: Distributed Adaptive Scene Recognition — A Multi-Agent Cloud-Edge Framework for Language-Guided Scene Detection"
+        date: 2025
+        publisher: "EMNLP 2025 Industry Track"
+        url: https://doi.org/10.18653/v1/2025.emnlp-industry.57
+      - title: "Communication-Efficient Collaborative Perception via Information Filling with Codebook"
+        date: 2024
+        publisher: "CVPR 2024"
+        url: https://arxiv.org/abs/2405.04966
+      - title: "Graph-Based Decentralized Task Allocation for Multi-Robot Target Localization"
+        date: 2024
+        publisher: "IEEE Robotics and Automation Letters (first author)"
+        url: https://doi.org/10.1109/LRA.2024.3475013
+      - title: "Compatible Transformer for Irregularly Sampled Multivariate Time Series"
+        date: 2023
+        publisher: "IEEE ICDM 2023"
+        url: https://doi.org/10.1109/ICDM58522.2023.00183
+
+    Teaching and Service:
+      - label: Teaching Assistant
+        details: "CS1108 — Introduction to Data Science, Purdue University, Fall 2023"
+      - label: Reviewer
+        details: "ICRA, ICLR, ECCV, NeurIPS, IROS, T-RO, T-ASE, T-ITS, RA-L, IoT-J"
