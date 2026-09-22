@@ -55,15 +55,15 @@ cv:
     Publications:
       - title: "VLM-DC: Vision Language Model for Automotive Data Collection"
         date: 2026
-        publisher: "IEEE Internet of Things Journal (co-first author)"
+        publisher: "IEEE Internet of Things Journal"
         url: https://doi.org/10.1109/JIOT.2026.3728234
       - title: "FleetAgent: Teleoperation Assistant for Autonomous Fleets via Vectorized V2N Messages"
         date: 2026
-        publisher: "IEEE/RSJ IROS 2026 (first author)"
+        publisher: "IEEE/RSJ IROS 2026"
         url: https://arxiv.org/abs/2606.21222
       - title: "OmniV2X: A Generative Foundation Planner for Efficient End-to-End Cooperative Driving"
         date: 2026
-        publisher: "IEEE/RSJ IROS 2026 (first author)"
+        publisher: "IEEE/RSJ IROS 2026"
         url: https://arxiv.org/abs/2606.21165
       - title: "LLM4AD: Large Language Models for Autonomous Driving — Concept, Review, Benchmark, Experiments, and Future Trends"
         date: 2026
@@ -103,7 +103,7 @@ cv:
         url: https://doi.org/10.1109/IROS60139.2025.11246750
       - title: "Communication-Efficient Multi-Agent 3D Detection via Hybrid Collaboration"
         date: 2025
-        publisher: "arXiv preprint (co-first author)"
+        publisher: "arXiv preprint"
         url: https://arxiv.org/abs/2508.07092
       - title: "Generative AI for Autonomous Driving: Frontiers and Opportunities"
         date: 2025
@@ -119,7 +119,7 @@ cv:
         url: https://arxiv.org/abs/2405.04966
       - title: "Graph-Based Decentralized Task Allocation for Multi-Robot Target Localization"
         date: 2024
-        publisher: "IEEE Robotics and Automation Letters (first author)"
+        publisher: "IEEE Robotics and Automation Letters"
         url: https://doi.org/10.1109/LRA.2024.3475013
       - title: "Compatible Transformer for Irregularly Sampled Multivariate Time Series"
         date: 2023
