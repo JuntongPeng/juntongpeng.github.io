@@ -46,6 +46,9 @@ ninja.data = [{
           section: "News",},{id: "news-vlm-dc-vision-language-model-for-automotive-data-collection-was-accepted-for-publication-in-the-ieee-internet-of-things-journal",
           title: 'VLM-DC: Vision Language Model for Automotive Data Collection was accepted for publication in...',
           description: "",
+          section: "News",},{id: "news-trophy-i-was-selected-as-a-neurips-2026-top-reviewer-tada",
+          title: ':trophy: I was selected as a NeurIPS 2026 Top Reviewer. :tada:',
+          description: "",
           section: "News",},{
         id: 'social-cv',
         title: 'CV',
